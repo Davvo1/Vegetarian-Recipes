@@ -16,7 +16,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const isInitialMount = useRef(true);
   
-  useEffect(() => {
+ useEffect(() => {
     if (isInitialMount.current) {
       // Skip the effect on initial render
       isInitialMount.current = false;
@@ -68,6 +68,7 @@ function App() {
           Search
         </button>
       </form>
+      <p className="introduction">All your favorite recipes, in one place</p>
       {loading ? <img className='loading-gif'
       src={loadingGif}/> : 
       <div className='recipe-holder'>

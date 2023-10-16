@@ -12,7 +12,9 @@
 
 .title {
    min-width: 10%;
-   font-size: 3vh;
+   font-size: 1.3vh;
+   color: #26C281;
+   text-decoration: none;
 }
 
 
