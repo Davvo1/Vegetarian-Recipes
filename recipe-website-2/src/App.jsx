@@ -66,7 +66,7 @@ function App() {
     <div className="App">
       <form className="search-form"
       onSubmit={submitSearch}>
-        <input 
+        <input
         className='search-bar'
         type="text"
         value={search}
