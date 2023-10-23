@@ -27,7 +27,7 @@ export default function recipeDetail() {
         setRecipeInfo(data);
     }
     return(
-        <>
+        <div className={style.recipe}>
         <h1 className={style.title}>{recipeInfo.title}</h1>
         <div className={style.recipeContainer}>
         <img src={recipeInfo.image}/>    
@@ -50,6 +50,6 @@ export default function recipeDetail() {
                     ))}
                     </ol>
         ))}
-        </>
+        </div>
     ) 
 }

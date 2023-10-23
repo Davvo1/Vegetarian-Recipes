@@ -1,6 +1,10 @@
 body {
-    display: flex;
-    justify-content: center;
+    background-color: #f9fafb;
+}
+
+.recipe{
+    width: 90%;
+    margin: auto;
 }
 
 .title {
@@ -36,6 +40,7 @@ ul {
 }
 
 hr {
+    margin-right: 100%;
     border: 3px solid red;
     border-radius: 5px;
     width: 10%;
