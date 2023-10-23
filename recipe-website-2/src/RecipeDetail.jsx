@@ -1,5 +1,6 @@
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
+import style from "./description.module.css";
 
 export default function recipeDetail() {
 
@@ -27,16 +28,21 @@ export default function recipeDetail() {
     }
     return(
         <>
-        <h1>{recipeInfo.title}</h1>
-        <img src={recipeInfo.image}/>
-        <h2>Ingredients:</h2>
-        <ul>
-        {recipeInfo.extendedIngredients && recipeInfo.extendedIngredients.map((ingredient, index) => (
-                    <li key={index}>{ingredient.original}</li>
-                ))}
-        </ul>
-        <h2>Instructions:</h2>
-
+        <h1 className={style.title}>{recipeInfo.title}</h1>
+        <div className={style.recipeContainer}>
+        <img src={recipeInfo.image}/>    
+        <div className={style.list}>    
+        <ul className={style.ingredients}>
+            <h2>Ingredients</h2>
+            <hr />
+            {recipeInfo.extendedIngredients && recipeInfo.extendedIngredients.map((ingredient, index) => (
+                        <li key={index}>{ingredient.original}</li>
+                    ))}
+            </ul>
+        </div>
+        </div>   
+        <h2>Instructions</h2>
+            <hr />
         {recipeInfo.analyzedInstructions && recipeInfo.analyzedInstructions.map((instructions, index) => (
                    <ol key={index}> 
                     {instructions.steps.map((step, stepIndex) => (

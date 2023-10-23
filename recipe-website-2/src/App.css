@@ -1,17 +1,44 @@
+body {
+    background-color: #f9fafb;
+    background-repeat: no-repeat;
+  }
+
+
 .App {
   text-align: center;
-  font-family:'Comic Sans MS', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+
 }
 
+.search-form {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .search-bar {
+  display: inline-block;
   border-radius: 5px;
+  width: 40%;
+  box-shadow: 0px 5px 20px rgb(170, 170, 170);
+  border: none;
+  height: 50%;
+  background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 40px;
+  background-color: #fff;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .recipe-holder {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+  max-width: 80%;
+  margin: auto;
 }
 
 .search-button {
@@ -28,6 +55,8 @@
   justify-content: center;
   text-wrap: wrap;
 }
+
+
 
 .loading-gif {
   width: 100vh;

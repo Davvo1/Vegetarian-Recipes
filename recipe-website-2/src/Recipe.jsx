@@ -10,7 +10,7 @@ export default function RecipeCard({title, image, id}) {
             src={image}
             alt="Image of the dish"
             className={style.image}/>
-             <Link  className={style.title} to={`RecipeDetail/:${id}`}><h1>{title}</h1></Link>
+             <Link target="_blank" rel="noopener" className={style.title} to={`RecipeDetail/:${id}`}><h1>{title}</h1></Link>
         </div>
     )
 }

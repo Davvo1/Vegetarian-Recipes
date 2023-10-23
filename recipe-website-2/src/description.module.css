@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    color: #69c6a8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.recipeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+.image {
+    margin-right: 20px;
+}
+
+.ingredients {
+    display: inline;
+}
+
+h2 {
+    margin-bottom: 2%;
+}
+
+.list {
+    display: inline;
+    
+}
+
+ul {
+    list-style: none;
+}
+
+hr {
+    border: 3px solid red;
+    border-radius: 5px;
+    width: 10%;
+}
+

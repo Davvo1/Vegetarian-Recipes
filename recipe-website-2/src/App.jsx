@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect, useRef } from 'react';
 import RecipeCard from './Recipe';
-import loadingGif from './loading.gif';
+import loadingGif from './assets/loading.gif';
 import {Routes, Route, useNavigate} from 'react-router-dom';
 import RecipeDetail from './RecipeDetail';
 import SearchBar from './SearchBar';
@@ -18,7 +18,6 @@ function App() {
   
  useEffect(() => {
     if (isInitialMount.current) {
-      // Skip the effect on initial render
       isInitialMount.current = false;
       return;
     }
@@ -28,11 +27,19 @@ function App() {
 
 
   async function getRecipes() {
+    try {
     let response = await fetch(`https://api.spoonacular.com/recipes/complexSearch?apiKey=${apiKey}&query=${query}&diet=vegetarian`);
+    if(!response.ok) {
+      throw new Error('Network response was not ok');
+    } 
     let data = await response.json();
     setRecipes(data.results);
     console.log(data.results);
+    } catch(err) {
+    console.log(err)
+    } finally {    
     setLoading(false);
+    }
   };
 
   function updateSearch(e) {
@@ -40,14 +47,15 @@ function App() {
   }
 
   function submitSearch(e) {
-    e.preventDefault()
-    setQuery(search);
-    if(query === '') {
+      e.preventDefault()
+      setQuery(search);
+      if(query === '') {
       return;
     }
     if(search === query) {
       return;
     }  
+    console.log(err);
     setSearch('');
     console.log(query);
      setLoading(true);
@@ -62,13 +70,11 @@ function App() {
         className='search-bar'
         type="text"
         value={search}
+        placeholder='What do you want to cook today?'
         onChange={updateSearch}
         />
-        <button className='search-button'>
-          Search
-        </button>
       </form>
-      <p className="introduction">All your favorite recipes, in one place</p>
+      <p className="introduction">Recommended recipes</p>
       {loading ? <img className='loading-gif'
       src={loadingGif}/> : 
       <div className='recipe-holder'>
