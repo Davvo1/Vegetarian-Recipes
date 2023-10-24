@@ -28,28 +28,45 @@ export default function recipeDetail() {
     }
     return(
         <div className={style.recipe}>
-        <h1 className={style.title}>{recipeInfo.title}</h1>
-        <div className={style.recipeContainer}>
-        <img src={recipeInfo.image}/>    
+        <div className={style.titleContainer}>
+            <img src={recipeInfo.image} className="image"/>   
+            <div className={style.title}>
+                <h1>{recipeInfo.title}</h1>
+            </div>
+        </div>
+        <div className={style.recipeInformation}>
+        <div className={style.info}>
+            <p>Servings: {recipeInfo.servings}</p>
+            <p>Prepping Time: 15 min</p>
+            <p>Cooking time: 30 min</p>
+        </div>
         <div className={style.list}>    
-        <ul className={style.ingredients}>
+        <ul>
             <h2>Ingredients</h2>
-            <hr />
             {recipeInfo.extendedIngredients && recipeInfo.extendedIngredients.map((ingredient, index) => (
                         <li key={index}>{ingredient.original}</li>
                     ))}
             </ul>
-        </div>
-        </div>   
-        <h2>Instructions</h2>
-            <hr />
         {recipeInfo.analyzedInstructions && recipeInfo.analyzedInstructions.map((instructions, index) => (
-                   <ol key={index}> 
+                  <>
+                   <ol key={index}>
+                      <h2>Instructions</h2>
                     {instructions.steps.map((step, stepIndex) => (
                         <li key={stepIndex}>{step.step}</li>
                     ))}
                     </ol>
+                    </>
         ))}
+            </div>
+            <div className={style.notes}>
+                <h2>Notes:</h2>
+                {recipeInfo.winePairing && recipeInfo.winePairing.pairingText ? (
+                    <p>{recipeInfo.winePairing.pairingText}</p>
+                ) : (
+                    <p>No notes.</p>
+                )} 
+            </div>  
+            </div>
         </div>
     ) 
 }
