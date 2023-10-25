@@ -4,6 +4,16 @@ body {
     justify-content: center;
 }
 
+@font-face {
+    font-family: 'Simulacro';
+    src:url('./assets/Simulacro.ttf.woff') format('woff'),
+        url('./assets/Simulacro.ttf.svg#Simulacro') format('svg'),
+        url('./assets/Simulacro.ttf.eot'),
+        url('./assets/Simulacro.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
+
 .recipe{
     height: 100vh;
     width: 70%;
@@ -19,18 +29,22 @@ body {
   }
 
 .title {
+    font-family: 'Simulacro';
+    font-size: 3vh;
     display: inline;
     background-color: #ffffff;
     z-index: 1;
-    width: 20%;
+    min-width: 30%;
+    max-width: 40%;
     text-align: left;
     margin-left: -10%;
     margin-top: 10%;
-    padding-left: 2%;
+    padding-left: 1%;
 }
 
 .image {
-    width: 40%;
+    min-width: 40%;
+    max-width: 70%;
     z-index: -1;
     border-radius: 5px;
 }
@@ -38,8 +52,9 @@ body {
 .recipeInformation {
     margin: auto;
     background-color: #f6f5f3;
-    margin-top: 2%;    
-    width: 70%;  
+    margin-top: 2%;
+    min-width: 70%;    
+    max-width: 90%;  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,13 +76,14 @@ body {
     width: 80%;
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    text-align: left;
     word-wrap: normal;
 }
 
 ul {
-    list-style: none;
+    list-style: url(./assets/chef.png);
     padding-left: 0;
+    min-width: 30%;
 }
 
 

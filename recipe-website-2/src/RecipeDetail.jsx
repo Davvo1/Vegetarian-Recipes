@@ -29,7 +29,7 @@ export default function recipeDetail() {
     return(
         <div className={style.recipe}>
         <div className={style.titleContainer}>
-            <img src={recipeInfo.image} className="image"/>   
+            <img src={recipeInfo.image} className={style.image}/>   
             <div className={style.title}>
                 <h1>{recipeInfo.title}</h1>
             </div>
@@ -37,8 +37,8 @@ export default function recipeDetail() {
         <div className={style.recipeInformation}>
         <div className={style.info}>
             <p>Servings: {recipeInfo.servings}</p>
-            <p>Prepping Time: 15 min</p>
-            <p>Cooking time: 30 min</p>
+            <p>Diet: {recipeInfo.diets && recipeInfo.diets[0]}</p>
+            <p>Cooking time: {recipeInfo.readyInMinutes}</p>
         </div>
         <div className={style.list}>    
         <ul>
