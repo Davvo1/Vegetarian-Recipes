@@ -1,12 +1,21 @@
 body {
-    background-color: #f9fafb;
-    background-repeat: no-repeat;
-  }
+  background-color: #f9fafb;
+  background-repeat: no-repeat;
+}
 
+@font-face {
+  font-family: 'Simulacro';
+  src: url('./assets/Simulacro.ttf.woff') format('woff'),
+    url('./assets/Simulacro.ttf.svg#Simulacro') format('svg'),
+    url('./assets/Simulacro.ttf.eot'),
+    url('./assets/Simulacro.ttf.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .App {
   text-align: center;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 
 }
 
@@ -21,20 +30,21 @@ body {
   display: inline-block;
   border-radius: 5px;
   width: 40%;
-  box-shadow: 0px 5px 20px rgb(170, 170, 170);
+  box-shadow:
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+    100px 100px 80px rgba(0, 0, 0, 0.07);
   border: none;
   height: 50%;
-  background-image: url(https://cdn2.hubspot.net/hubfs/4004166/bioticresearch_website_assets/images/search_icon.png);
+  background-image: url(./assets/search.png);
   background-repeat: no-repeat;
-  background-position: left center;
+  background-position: 1%;
   padding-left: 40px;
   background-color: #fff;
-  -webkit-appearance: none;
-  appearance: none;
 }
 
 .recipe-holder {
   display: flex;
+  background-color: #f6f5f3;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 80%;
@@ -48,6 +58,11 @@ body {
 }
 
 .introduction {
+  margin-left: 10%;
+  width: 20%;
+  display: inline;
+  font-family: 'Simulacro';
+  border-bottom: 1px solid black;
   height: 10vh;
   font-size: 5vh;
   display: flex;
@@ -56,7 +71,9 @@ body {
   text-wrap: wrap;
 }
 
-
+.chef-hat {
+  margin-right: 3%;
+}
 
 .loading-gif {
   width: 100vh;
