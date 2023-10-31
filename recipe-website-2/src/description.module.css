@@ -96,3 +96,7 @@ ul {
 .notes h2, .notes p {
     padding-left: 2%;
 }
+
+.searchBar {
+    visibility: hidden;
+}

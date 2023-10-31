@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import style from "./description.module.css";
+import NavBar from "./NavBar";
 
 export default function recipeDetail() {
 
@@ -27,6 +28,8 @@ export default function recipeDetail() {
         setRecipeInfo(data);
     }
     return(
+        <> 
+        <NavBar showSearchBar={false}/>
         <div className={style.recipe}>
         <div className={style.titleContainer}>
             <img src={recipeInfo.image} className={style.image}/>   
@@ -38,7 +41,7 @@ export default function recipeDetail() {
         <div className={style.info}>
             <p>Servings: {recipeInfo.servings}</p>
             <p>Diet: {recipeInfo.diets && recipeInfo.diets[0]}</p>
-            <p>Cooking time: {recipeInfo.readyInMinutes}</p>
+            <p>Cooking time: {recipeInfo.readyInMinutes}m</p>
         </div>
         <div className={style.list}>    
         <ul>
@@ -68,5 +71,6 @@ export default function recipeDetail() {
             </div>  
             </div>
         </div>
+        </>
     ) 
 }

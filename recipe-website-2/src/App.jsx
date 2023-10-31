@@ -1,6 +1,7 @@
 import './App.css';
 import { useState, useEffect, useRef } from 'react';
 import RecipeCard from './Recipe';
+import NavBar from "./NavBar";
 import loadingGif from './assets/loading.gif';
 import chefHat from "./assets/chef.png";
 
@@ -14,7 +15,7 @@ function App() {
   const [searched, setSearched] = useState(false);
   const isInitialMount = useRef(true);
 
-  useEffect(() => {
+ useEffect(() => {
     if (isInitialMount.current) {
       isInitialMount.current = false;
       return;
@@ -60,16 +61,12 @@ function App() {
 
   return (
     <div className="App">
-      <form className="search-form"
-        onSubmit={submitSearch}>
-        <input
-          className='search-bar'
-          type="text"
-          value={search}
-          placeholder='What do you want to cook today?'
-          onChange={updateSearch}
-        />
-      </form>
+      <NavBar
+        search={search}
+        updateSearch={updateSearch}
+        submitSearch={submitSearch}
+        showSearchBar={true}
+      />
       <p className="introduction"><img src={chefHat} className='chef-hat'/>{searched ? "Searched Recipes" : "Recommended recipes"}</p>
       {loading ? <img className='loading-gif'
         src={loadingGif} /> :
