@@ -25,12 +25,12 @@ body {
   background-color: #f6f5f3;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 90%;
+  max-width: 98%;
   margin: auto;
 }
 
 .introduction {
-  margin-left: 10%;
+  margin-left: 5%;
   width: 40%;
   display: inline;
   font-family: 'Simulacro';
@@ -61,11 +61,27 @@ body {
   width: 100%;
 }
 
+@media only screen and (min-width: 600px) {
+  .chef-hat {
+    margin-bottom: 1%;
+    width: 8%;
+  }
+}
 
 @media only screen and (min-width: 992px) {
 
+  .recipe-holder {
+    display: flex;
+    background-color: #f6f5f3;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: auto;
+  }
+  
+
 .introduction {
-  margin-left: 10%;
+  margin-left: 5%;
   width: 20%;
   display: inline;
   font-family: 'Simulacro';
