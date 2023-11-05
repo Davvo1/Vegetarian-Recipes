@@ -75,13 +75,13 @@ body {
     background-color: #f6f5f3;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 90%;
+    max-width: 80%;
     margin: auto;
   }
   
 
 .introduction {
-  margin-left: 5%;
+  margin-left: 10%;
   width: 20%;
   display: inline;
   font-family: 'Simulacro';

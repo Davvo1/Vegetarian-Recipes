@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function NavBar({submitSearch, search, updateSearch, showSearchBar}) {
    return(
-    <div class={style.navbar}>
+    <div className={style.navbar}>
     <img src={logo} className={style.appLogo}/>
     { showSearchBar && (
     <form className={style.searchForm}
