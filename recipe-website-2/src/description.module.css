@@ -13,6 +13,88 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+    .recipe{
+        height: 100vh;
+        width: 70%;
+        margin: auto;
+    }
+    
+    
+    .titleContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2%;
+      }
+    
+    .title {
+        font-family: 'Simulacro';
+        font-size: 1.5vh;
+        display: inline;
+        background-color: #ffffff;
+        z-index: 1;
+        min-width: 50%;
+        max-width: 60%;
+        text-align: left;
+        margin-left: -30%;
+        margin-top: 10%;
+        padding-left: 1%;
+    }
+    
+    .image {
+        width: 75vw;
+        z-index: -1;
+        border-radius: 5px;
+    }
+    
+    .recipeInformation {
+        background-color: #f6f5f3;
+        margin-top: 2%;
+        margin-left: -17%;
+         width: 95vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+    .info {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid black
+    }
+    
+    .info p {
+        display: inline;
+    }
+    
+    .list {
+        width: 86%;
+        display: flex;
+        justify-content: space-between;
+        text-align: left;
+        word-wrap: normal;
+    }
+    
+    ul {
+        list-style: url(./assets/chef.png);
+        padding-left: 0;
+    }
+    
+    
+    .notes {
+        width: 90%;
+        border: 1px solid black;
+        margin-bottom: 2%;
+    }
+    
+    .notes h2, .notes p {
+        padding-left: 2%;
+    }
+
+@media only screen and (min-width: 992px) {
+
 
 .recipe{
     height: 100vh;
@@ -97,6 +179,5 @@ ul {
     padding-left: 2%;
 }
 
-.searchBar {
-    visibility: hidden;
+
 }
