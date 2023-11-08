@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import style from "./description.module.css";
 import NavBar from "./NavBar";
 
@@ -9,13 +9,8 @@ export default function recipeDetail() {
     const { id } = useParams();
     const recipeId = id.replace(":", "");
     const [recipeInfo, setRecipeInfo] = useState({});
-    const isInitialMount = useRef(true);
 
     useEffect(() => {
-        if (isInitialMount.current) {
-            isInitialMount.current = false;
-            return;
-        }
         fetchRecipe();
     }, [recipeId]);
 

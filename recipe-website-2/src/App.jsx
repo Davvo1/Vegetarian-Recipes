@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import RecipeCard from './Recipe';
 import NavBar from "./NavBar";
 import loadingGif from './assets/loading.gif';
@@ -13,14 +13,8 @@ function App() {
   const [query, setQuery] = useState('');
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
-  const isInitialMount = useRef(true);
 
  useEffect(() => {
-    if (isInitialMount.current) {
-      isInitialMount.current = false;
-      return;
-    }
-
     getRecipes();
   }, [query]);
 
