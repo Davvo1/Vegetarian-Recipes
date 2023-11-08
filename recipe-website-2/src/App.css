@@ -49,8 +49,8 @@ body {
 }
 
 .loading-gif {
-  width: 100vh;
-  height: 100vh;
+  width: 80vw;
+  height: 50vh;
 }
 
 #error-page {
